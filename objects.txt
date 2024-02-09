@@ -1,0 +1,22 @@
+person
+bicycle
+bench
+backpack
+umbrella
+handbag
+tie
+suitcase
+sports ball
+bottle
+chair
+couch
+dining table
+tv
+laptop
+mouse
+remote
+keyboard
+cell phone
+book
+clock
+vase
