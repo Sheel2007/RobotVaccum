@@ -24,3 +24,4 @@ Additionally, the JetBot software automatically controls the motors which elimin
 
 [JetBot](https://jetbot.org/master/examples/collision_avoidance.html)\
 [Mobile Robot](https://articulatedrobotics.xyz/mobile-robot-1-project-overview/)
+[Mobile Robot GitHub](https://github.com/joshnewans/my_bot/tree/main)
