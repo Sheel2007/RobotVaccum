@@ -44,7 +44,25 @@ Additionally, the JetBot software automatically controls the motors which elimin
    - **Relevant**: Ensure that the path planning algorithm supports the overall objective of optimizing the robot's navigation efficiency while avoiding collisions.
    - **Time-bound**: Complete the development and testing of the path planning algorithm within four weeks.
 
-### Action Plan:
+
+## Lidar Sensor Plan
+### Data Acquisition:
+
+Initialize LiDAR Sensor: Begin by initializing the LiDAR sensor in your Python script. This typically involves setting up the communication interface (e.g., UART, USB) and configuring any required parameters such as baud rate or scan frequency.
+Start Data Acquisition: Once the sensor is initialized, start acquiring LiDAR data. This may involve sending commands to the sensor to begin scanning and continuously receiving scan data packets.
+Read LiDAR Scan Data: Continuously read LiDAR scan data packets from the sensor. Each packet contains information about the distance measurements at various angles around the sensor's rotation.
+Data Processing:
+
+Parse Scan Data: Parse the raw LiDAR scan data packets to extract distance measurements and corresponding angles. This involves unpacking the data and converting it into a usable format for further processing.
+Coordinate Transformation: If necessary, perform coordinate transformation to align the LiDAR data with the coordinate system of the JetBot. This ensures consistency between the LiDAR data and the JetBot's motion.
+Data Filtering and Noise Reduction: Apply any necessary filtering or noise reduction techniques to the LiDAR data to improve its quality. This may include outlier removal, median filtering, or averaging over multiple scans.
+Mapping/Path Planning:
+
+Occupancy Grid Mapping: Implement an occupancy grid mapping algorithm to create a map of the robot's environment based on the LiDAR data. This involves dividing the environment into grid cells and updating the occupancy status of each cell based on the presence of obstacles detected by the LiDAR.
+SLAM (Simultaneous Localization and Mapping): Alternatively, if real-time localization is also required, implement a SLAM algorithm to simultaneously localize the robot within its environment while mapping the surroundings using LiDAR data.
+Path Planning Algorithms: Implement path planning algorithms such as A* (A-star) or Dijkstra's algorithm to generate a path for the robot to navigate through the mapped environment. These algorithms take into account the map created from LiDAR data and plan a path that avoids obstacles while reaching the desired goal.
+
+## Action Plan:
 
 #### Sheel Shah:
 1. **Week 1**: Research and understand the functionality of the NVIDIA JetBot collision avoidance system. Gather training data for obstacle detection.
@@ -58,14 +76,14 @@ Additionally, the JetBot software automatically controls the motors which elimin
 3. **Week 3**: Integrate the path planning algorithm with the robot's control software. Conduct testing to validate the accuracy of the planned paths.
 4. **Week 4**: Refine the path planning algorithm based on real-world testing feedback. Document the algorithm implementation and performance metrics.
 
-### Learning Objectives:
+## Learning Objectives:
 
-#### Sheel Shah:
+### Sheel Shah:
 - **Objective 1**: Gain proficiency in utilizing NVIDIA JetBot's collision avoidance capabilities.
 - **Objective 2**: Develop skills in training neural networks for obstacle detection and avoidance.
 - **Objective 3**: Enhance knowledge of OpenCV and TensorFlow for implementing computer vision algorithms.
 
-#### Fikir Reta:
+### Fikir Reta:
 - **Objective 1**: Acquire expertise in ROS and SLAM techniques for robot path planning.
 - **Objective 2**: Develop proficiency in processing lidar data for environment mapping.
 - **Objective 3**: Improve skills in integrating path planning algorithms with robot control systems.
